@@ -233,7 +233,7 @@ body {
 .row-02 {
     display: grid;
     width: 98%;
-    min-height: 100px;
+    min-height: 300px;
     border: 1px solid gray;
     grid-template-columns: repeat(5, 1f);
     grid-template-areas:
