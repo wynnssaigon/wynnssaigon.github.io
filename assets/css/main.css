@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: serif;
+}
+
+.text-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Khoảng cách giữa chữ và đường */
+
+
+}
+
+.text {
+    width: 20%;
+    /* % TEXT */
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+.line {
+    width: 50%;
+    /* Độ dài đường thẳng */
+    height: 2px;
+    background-color: #fff;
+}
+
+@media(max-width:1024px) {
+    .text {
+        font-size: 20px;
+    }
+
+    .line {
+        width: 40%;
+        margin-left: 60px;
+    }
+}
+
+@media(max-width:700px) {
+    .text {
+        font-size: 20px;
+    }
+
+    .line {
+        width: 50%;
+        margin-left: 60px;
+    }
+}
+
+body {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+@media(max-width:900px) {
+    body {
+        padding: 0px;
+        background-color: black;
+    }
+
+}
+.wrapper {
+    background-image: url(/assets/images/body-bg.png);
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: auto auto 100px  600px 300px; */
+    grid-template-rows: minmax(100px, 1fr);
+    grid-template-areas:
+        "header header header"
+        "banner banner banner"
+        "welcome welcome welcome"
+        "content-01 content-01 content-01"
+        "content-02 content-02 content-02"
+        "footer footer footer";
+    column-gap: 10px;
+    row-gap: 10px;
+    /* border: 1px solid gray; */
+}
+
+.banner {
+    grid-area: banner;
+
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+.content-01 {
+    grid-area: content-01;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 300px;
+    column-gap: 10px;
+}
+
+.content-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media(max-width:700px) {
+    .wrapper {
+        width: 98%;
+    }
+
+    .content-01 {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+}
+
+.content-img {
+    /* border: 1px solid gold; */
+    margin: 15px;
+}
+
+.content-text {
+    /* border: 1px solid gold; */
+    margin: 15px;
+
+}
+
+.content-text p {
+    color: white;
+    line-height: 30px;
+    text-decoration: solid;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+
+.content-02 {
+    grid-area: content-02;
+    margin: 15px;
+}
+
+.content-02 p {
+    color: white;
+    line-height: 30px;
+    text-decoration: solid;
+    padding: 20px 10px;
+
+}
+
+.welcome h2 {
+    text-align: center;
+    color: gold;
+}
