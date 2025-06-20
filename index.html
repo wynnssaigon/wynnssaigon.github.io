@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/slide.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header row">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li class="logo"> <a href="index.html">
+                                <img src="./assets/images/wynn-logo.png">
+                            </a></li>
+                        <li class="items"><a href="./index.html">HOME</a></li>
+                        <li class="items"><a href="./events.html">EVENTS</a></li>
+                        <li class="items"><a href="./gamingguide.html">GAMING GUIDE</a></li>
+                        <li class="items"><a href="./register.html">REGISTER</a></li>
+                        <li class="items"><a href="./askus.html">ASK US</a></li>
+                        <li class="items"><a href="#">LANGUAGE</a></li>
+                        <li class="btn"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+
+                    </ul>
+                </nav>
+                <script>
+                    $(document).ready(function () {
+                        $('.btn').click(function () {
+                            $('.items').toggleClass("show");
+                            $('ul li').toggleClass("hide");
+                        })
+                    })
+                </script>
+            </div>
+        </div>
+        <div class="banner row">
+
+            <div class="container">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="./assets/slides/1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/slides/2.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/slides/3.png" alt=""></div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script>
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    autoplay: {
+                        delay: 3000,
+                        DisableOnInteraction: false,
+                    },
+                    loop: true,
+
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            </script>
+        </div>
+        <div class="welcome row">
+            <h2>Welcome to Wynn’s Saigon</h2>
+        </div>
+        <div class="content-01 row">
+            <div class="content-img"><img src="./assets/images/welcome-img.png"></div>
+            <div class="content-text">
+                <h3>
+                    <hr><br>
+                    Our goal is to provide customers with an elegant
+                    experience. In addition to providing a authorized
+                    electronic and table games for eligible guests, our staff
+                    delivers reliable and hospitable service. And with
+                    numerous membership - based service categories
+                    available, we sincerely look forward to welcoming you to
+                    Wynn’s Saigon.<br>
+                    Wynn’s Saigon goals are to provide lifelong, unforgettable
+                    memories to our visitors, and to become the world’s
+                    licensed electronic gaming facility.<br>
+                    This website is designed to make you feel closer to
+                    Wynn’s Saigon. Through this website, we provide helpful
+                    information to our customers.
+                </h3>
+
+
+            </div>
+        </div>
+        <div class="content-02 row">
+            <div class="text-line">
+                <div class="text">INFORMATION</div>
+                <div class="line"></div>
+            </div>
+            <h3> Wynn’s Saigon E-Gaming Club offers a premier gaming experience with cutting-edge
+                technology and world-class services. Featuring a variety of electronic games, including slot
+                machines, baccarat, roulette, and more, the club ensures excitement for every guest. With
+                exceptional hospitality, exclusive member privileges, and VIP experiences, Wynn’s Saigon
+                is the perfect choice for top-tier entertainment. Whether a frequent visitor or first-time
+                guest, you’re guaranteed an unforgettable journey into e-gaming luxury
+            </h3>
+            <br>
+
+        </div>
+        <div class="content-03 row">
+            <div class="text-line">
+                <div class="text">ACCESS</div>
+                <div class="line"></div>
+            </div>
+
+        </div>
+        <div class="footer row">
+
+            <div class="footer-img"> <img src="./assets/images/Map.png"></div>
+            <div class="footer-text">
+                <h2>Wynn's Saigon Egaming Club</h2>
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <div class="footer-line"></div>
+                <h3>Hotel Equatorial Ho Chi Minh City</h3>
+                <p>242 Tran Binh Trong Street, Ward 4</br>
+                    District 5, Ho Chi Minh City</br>
+                    +8490 455 1024 | +8493 691 401</p>
+            </div>
+
+        </div>
+        <div class="info"><hr><br>This website is intended solely for informational purposes. All gaming services mentioned
+            herein are strictly reserved for holders of valid foreign passports.<br>
+            Wynn's Saigon does not promote or advertise any gaming activities to Vietnamese citizens or residents.
+        </div>
+    </div>
+
+
+</body>
+
+</html>
