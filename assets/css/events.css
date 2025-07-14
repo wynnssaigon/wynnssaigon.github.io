@@ -1,0 +1,364 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.049);
+}
+
+.text {
+    width: 30%;
+    /* % TEXT */
+    font-size: 35px;
+    font-weight: bold;
+    color: #CDA541;
+    padding: 20px 20px;
+}
+
+.line {
+    width: 65%;
+    /* Độ dài đường thẳng */
+    height: 3px;
+    background-color: #CDA541;
+}
+
+.text-01 {
+    width: 65%;
+    /* % TEXT */
+    font-size: 35px;
+    font-weight: bold;
+    color: #CDA541;
+    padding: 20px 20px;
+    letter-spacing: 6px;
+}
+
+.line-01 {
+    width: 30%;
+    /* Độ dài đường thẳng */
+    height: 3px;
+    background-color: #CDA541;
+}
+
+.mid-line {
+    width: 300px;
+    height: 4px;
+    background-color: #CDA541;
+    margin: auto;
+
+}
+
+@media(max-width:700px) {
+    .text {
+        width: 30%;
+        font-size: 25px;
+    }
+
+    .line {
+        width: 40%;
+        margin-left: 100px;
+    }
+
+    .text-01 {
+        width: 75%;
+        font-size: 20px;
+    }
+
+    .line-01 {
+        width: 20%;
+
+    }
+}
+
+
+
+@media(max-width:900px) {
+    body {
+        padding: 0px;
+        background-color: black;
+    }
+
+}
+
+.wrapper {
+    background-image: url(/assets/images/body-background.png);
+    background-size: 100%;
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: auto auto 100px  600px 300px; */
+    grid-template-rows: minmax(100px, 1fr);
+    grid-template-areas:
+        "header header header"
+        "text-line text-line text-line"
+        "promo promo promo"
+        "text-line-01 text-line-01 text-line-01"
+        "slogan slogan slogan"
+        "event event event"
+        "text-line-02 text-line-02 text-line-02"
+        "prices prices prices"
+        "text-line-03 text-line-03 text-line-03"
+        "services services services"
+        "footer footer footer"
+        "info info info";
+    ;
+    column-gap: 10px;
+    row-gap: 5px;
+    /* border: 1px solid gray; */
+}
+
+@media(max-width:900px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+.text-line {
+    grid-area: text-line;
+    min-height: 20px;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 6px;
+}
+
+.text-line-01 {
+    grid-area: text-line-01;
+    min-height: 20px;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 6px;
+}
+
+.text-line-02 {
+    grid-area: text-line-02;
+    min-height: 20px;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 6px;
+}
+
+.text-line-03 {
+    grid-area: text-line-03;
+    min-height: 20px;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.row {
+    padding: 10px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.banner {
+    grid-area: banner;
+    height: auto;
+}
+
+@media(max-width:900px) {
+    .banner {
+        height: auto;
+    }
+}
+
+
+
+.promo {
+    grid-area: promo;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: 1px solid rgb(247, 22, 22); */
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+@media(max-width:900px) {
+    .promo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:700px) {
+    .promo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* .promo-col {
+    border: 1px solid yellow;
+    min-height: 300px;
+
+} */
+
+.promo-col img {
+    width: 100%;
+    align-items: center;
+}
+
+.slogan {
+    grid-area: slogan;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 30px 10px;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 6px;
+
+}
+
+.slogan h2 {
+    color: #CDA541;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.event {
+    grid-area: event;
+    /* border: 1px solid rgb(247, 22, 22); */
+    grid-area: event;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+/* .event-col {
+    border: 1px solid yellow;
+} */
+
+.event-col img {
+    width: 100%;
+    align-items: center;
+}
+
+.event-col {
+    background-color: #f4d0748b;
+}
+
+.event-col h3 {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    font-weight: 900;
+
+}
+
+.event-line {
+    background-color: #030303;
+    height: 2px;
+    width: 20%;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+@media(max-width:900px) {
+    .event {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .slogan h2 {
+        font-size: 30px;
+    }
+}
+
+.prices {
+    grid-area: prices;
+    min-height: 300px;
+    margin: 20px;
+    /* border: 1px solid yellow; */
+}
+
+.prices img {
+    width: 100%;
+
+}
+
+.services {
+    grid-area: services;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* border: 1px solid gray; */
+    min-height: 300px;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 20px;
+
+}
+
+.services-col {
+    min-height: 200px;
+    /* border: 1px solid gray; */
+    color: #030303;
+
+}
+
+.services-col h2 {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 10px 15px;
+    letter-spacing: 6px;
+}
+
+.services-col h3 {
+    font-size: 25px;
+    line-height: 30px;
+    padding: 10px 15px;
+    color: #f4d074;
+}
+
+.services-col p {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 25px;
+    padding: 10px 25px;
+    letter-spacing: 3px;
+}
+
+
+.services-col img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media(max-width:900px) {
+    .services {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services-col h2 {
+        font-size: 20px;
+    }
+
+    .services-col h3 {
+        font-size: 18px;
+    }
+}
+
+/*  */

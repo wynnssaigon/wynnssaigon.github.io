@@ -1,0 +1,167 @@
+.footer-line {
+    background-color: #cda541;
+    height: 2px;
+    width: 90%;
+}
+
+.full-line {
+    background-color: #cda541;
+    height: 20px;
+    width: 100%;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.footer {
+    grid-area: footer;
+    min-height: 300px;
+
+}
+
+.footer-main {
+    min-height: 200px;
+    display: flex;
+    width: 100%;
+    column-gap: 5px;
+}
+
+.footer-left {
+    width: 29%;
+    margin: auto;
+
+}
+
+.footer-left img {
+    width: 80%;
+}
+
+.footer-right {
+    width: 60%;
+    margin: auto;
+    line-height: 40px;
+}
+
+.footer-right h2 {
+    color: #cda541;
+    font-size: 35px;
+    letter-spacing: 8px;
+}
+
+.footer-right h3 {
+    padding-top: 30px;
+    color: #cda541;
+    font-size: 35px;
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+
+.footer-right p {
+    color: #030303;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.stars {
+    color: goldenrod;
+    font-size: 30px;
+}
+
+.footer-info {
+    width: 100%;
+    min-height: 100px;
+    color: #fff;
+    line-height: 30px;
+    padding-left: 40px;
+}
+
+.icon {
+    display: flex;
+    column-gap: 10px;
+}
+
+.icon-item {
+    width: 10%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-text {
+    width: 60%;
+}
+
+.footer-info {
+    width: 100%;
+    min-height: 100px;
+    color: #030303;
+    line-height: 30px;
+    padding-left: 40px;
+    font-weight: 700;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media(max-width:700px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "footer-left"
+            "footer-right"
+        ;
+
+    }
+
+    .footer-left {
+        grid-area: footer-left;
+        width: 100%;
+        text-align: center;
+    }
+    .footer-left img{
+        width: 60%;
+    }
+    .footer-line{
+        width: 100%;
+    }
+
+    .footer-right {
+        width: 100%;
+        grid-area: footer-right;
+        text-align: center;
+
+    }
+
+    .footer-main {
+        display: block;
+        width: 100%;
+
+    }
+
+    .footer-info {
+        padding-left: 5px;
+        font-size: 12px;
+    }
+
+    .footer-right h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .footer-right h3 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .footer-right p{
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .stars {
+        text-align: center;
+    }
+    .icon {
+        padding-left: 15%;
+    }
+}
