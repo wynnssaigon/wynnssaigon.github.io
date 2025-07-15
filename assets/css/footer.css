@@ -125,7 +125,8 @@
     }
 
     .footer-left p {
-        font-size: 12px;
+        font-size: 10px;
+        letter-spacing: 1px;
     }
 
     .footer-main {
